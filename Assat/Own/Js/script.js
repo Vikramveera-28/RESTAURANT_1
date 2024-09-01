@@ -23,3 +23,5 @@ function service(serviceId){
 
     serviceImage.style.display = serviceImage.style.display === 'none' ? 'grid' : 'none'
 }
+
+
