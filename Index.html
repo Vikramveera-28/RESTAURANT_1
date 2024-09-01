@@ -75,7 +75,6 @@
                 </div>
             </div>
         </div>
-        <div id="liveAlertPlaceholder" class="position-absolute bottom-0 end-0"></div>
     </section>
     <section class="container-fluid page-2 position-relative py-5" id="aboutPage">
         <p class="display-3 fw-bold text-center text-danger position-relative pb-5">ABOUT</p>
@@ -100,17 +99,16 @@
             <div class="col-12 col-md-6">
                 <div class="row box-left">
                     <div class="col-12 col-md-6">
-                        <img src="https://cdn.pixabay.com/photo/2024/04/27/12/41/ai-generated-8723664_640.png"
-                            style="height: 100%;" class="img-fluid" alt="">
+                        <img src="https://cdn.pixabay.com/photo/2024/04/27/12/41/ai-generated-8723664_640.png" style="height: 100%;"
+                            class="img-fluid" alt="">
                     </div>
                     <div class="col-12 col-md-6">
-                        <h1 class="fw-bold">Chicken Burger</h1>
+                        <h1 class="fw-bold" id="chickeBurgerTitle">Chicken Burger</h1>
                         <p class="lead fs-6">Great way to make your business appear trust and relevant</p>
                         <p class="lead"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                                class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                                class="bi bi-star-half"></i></p>
-                        <p class="text-danger fw-bold fs-4">₹ 100/-</p>
-                        <button type="button" class="btn btn-warning" id="liveToastBtn">Add Card</button>
+                                class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i></p>
+                        <p class="text-danger fw-bold fs-4" id="chickeBurgerPrice">₹ 100/-</p>
+                        <button type="button" class="btn btn-warning" id="" onclick="liveAlertBtn('chickeBurgerTitle', 'chickeBurgerPrice')">Add Card</button>
                     </div>
                 </div>
             </div>
@@ -121,13 +119,13 @@
                             style="height: 100%;" class="img-fluid" alt="">
                     </div>
                     <div class="col-12 col-md-6">
-                        <h1 class="fw-bold">Spicy Chicken Burger</h1>
+                        <h1 class="fw-bold" id="spicyBurgerTitle">Spicy Chicken Burger</h1>
                         <p class="lead fs-6">Great way to make your business appear trust and relevant</p>
                         <p class="lead"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
                                 class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
                                 class="bi bi-star-half"></i></p>
-                        <p class="text-danger fw-bold fs-4">₹ 150/-</p>
-                        <button type="button" class="btn btn-warning" id="liveToastBtn">Add Card</button>
+                        <p class="text-danger fw-bold fs-4" id="spicyBurgerPrice">₹ 150/-</p>
+                        <button type="button" class="btn btn-warning" id="" onclick="liveAlertBtn('spicyBurgerTitle', 'spicyBurgerPrice')">Add Card</button>
                     </div>
                 </div>
             </div>
@@ -138,13 +136,13 @@
                             style="height: 100%;" class="img-fluid" alt="">
                     </div>
                     <div class="col-12 col-md-6">
-                        <h1 class="fw-bold">Egg Burger</h1>
+                        <h1 class="fw-bold" id="eggBurgerTitle">Egg Burger</h1>
                         <p class="lead fs-6">Great way to make your business appear trust and relevant</p>
                         <p class="lead"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
                                 class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
                                 class="bi bi-star-half"></i></p>
-                        <p class="text-danger fw-bold fs-4">₹ 80/-</p>
-                        <button type="button" class="btn btn-warning" id="liveToastBtn">Add Card</button>
+                        <p class="text-danger fw-bold fs-4" id="eggBurgerPrice">₹ 80/-</p>
+                        <button type="button" class="btn btn-warning" id="" onclick="liveAlertBtn('eggBurgerTitle', 'eggBurgerPrice')">Add Card</button>
                     </div>
                 </div>
             </div>
@@ -155,13 +153,13 @@
                             style="height: 100%;" class="img-fluid" alt="">
                     </div>
                     <div class="col-12 col-md-6">
-                        <h1 class="fw-bold">Cheese Burger</h1>
+                        <h1 class="fw-bold" id="cheeseBurgerTitle">Cheese Burger</h1>
                         <p class="lead fs-6">Great way to make your business appear trust and relevant</p>
                         <p class="lead"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
                                 class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
                                 class="bi bi-star-half"></i></p>
-                        <p class="text-danger fw-bold fs-4">₹ 70/-</p>
-                        <button type="button" class="btn btn-warning" id="liveToastBtn">Add Card</button>
+                        <p class="text-danger fw-bold fs-4" id="cheeseBurgerPrice">₹ 70/-</p>
+                        <button type="button" class="btn btn-warning" id="" onclick="liveAlertBtn('cheeseBurgerTitle', 'cheeseBurgerPrice')">Add Card</button>
                     </div>
                 </div>
             </div>
@@ -175,13 +173,13 @@
                             style="height: 100%;" class="img-fluid" alt="">
                     </div>
                     <div class="col-12 col-md-6">
-                        <h1 class="fw-bold">Chicken Pizza</h1>
+                        <h1 class="fw-bold" id="chickenPizzaTitle">Chicken Pizza</h1>
                         <p class="lead fs-6">Great way to make your business appear trust and relevant</p>
                         <p class="lead"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
                                 class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
                                 class="bi bi-star-half"></i></p>
-                        <p class="text-danger fw-bold fs-4">₹ 180/-</p>
-                        <button type="button" class="btn btn-warning" id="liveToastBtn">Add Card</button>
+                        <p class="text-danger fw-bold fs-4" id="chickenPizzaPrice">₹ 180/-</p>
+                        <button type="button" class="btn btn-warning" id="" onclick="liveAlertBtn('chickenPizzaTitle', 'chickenPizzaPrice')">Add Card</button>
                     </div>
                 </div>
             </div>
@@ -192,13 +190,13 @@
                             style="height: 100%;" class="img-fluid" alt="">
                     </div>
                     <div class="col-12 col-md-6">
-                        <h1 class="fw-bold">Egg Pizza</h1>
+                        <h1 class="fw-bold" id="eggPizzaTitle">Egg Pizza</h1>
                         <p class="lead fs-6">Great way to make your business appear trust and relevant</p>
                         <p class="lead"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
                                 class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
                                 class="bi bi-star-half"></i></p>
-                        <p class="text-danger fw-bold fs-4">₹ 120/-</p>
-                        <button type="button" class="btn btn-warning" id="liveToastBtn">Add Card</button>
+                        <p class="text-danger fw-bold fs-4" id="eggPizzaPrice">₹ 120/-</p>
+                        <button type="button" class="btn btn-warning" id="" onclick="liveAlertBtn('eggPizzaTitle', 'eggPizzaPrice')">Add Card</button>
                     </div>
                 </div>
             </div>
@@ -209,13 +207,13 @@
                             style="height: 100%;" class="img-fluid" alt="">
                     </div>
                     <div class="col-12 col-md-6">
-                        <h1 class="fw-bold">Prawn Pizza</h1>
+                        <h1 class="fw-bold" id="prawnPizzaTitle">Prawn Pizza</h1>
                         <p class="lead fs-6">Great way to make your business appear trust and relevant</p>
                         <p class="lead"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
                                 class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
                                 class="bi bi-star-half"></i></p>
-                        <p class="text-danger fw-bold fs-4">₹ 230/-</p>
-                        <button type="button" class="btn btn-warning" id="liveToastBtn">Add Card</button>
+                        <p class="text-danger fw-bold fs-4" id="prawnPizzaPrice">₹ 230/-</p>
+                        <button type="button" class="btn btn-warning" id="" onclick="liveAlertBtn('prawnPizzaTitle', 'chickenPizzaPrice')">Add Card</button>
                     </div>
                 </div>
             </div>
@@ -226,13 +224,13 @@
                             style="height: 100%;" class="img-fluid" alt="">
                     </div>
                     <div class="col-12 col-md-6">
-                        <h1 class="fw-bold">Cheese Pizza</h1>
+                        <h1 class="fw-bold" id="cheesePizzaTitle">Cheese Pizza</h1>
                         <p class="lead fs-6">Great way to make your business appear trust and relevant</p>
                         <p class="lead"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
                                 class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
                                 class="bi bi-star-half"></i></p>
-                        <p class="text-danger fw-bold fs-4">₹ 100/-</p>
-                        <button type="button" class="btn btn-warning" id="liveToastBtn">Add Card</button>
+                        <p class="text-danger fw-bold fs-4" id="cheesePizzaPrice">₹ 100/-</p>
+                        <button type="button" class="btn btn-warning" id="" onclick="liveAlertBtn('cheesePizzaTitle', 'cheesePizzaPrice')">Add Card</button>
                     </div>
                 </div>
             </div>
@@ -246,13 +244,13 @@
                             style="height: 100%;" class="img-fluid" alt="">
                     </div>
                     <div class="col-12 col-md-6">
-                        <h1 class="fw-bold">Chicken Biriyani</h1>
+                        <h1 class="fw-bold" id="chickenBiriyaniTitle">Chicken Biriyani</h1>
                         <p class="lead fs-6">Great way to make your business appear trust and relevant</p>
                         <p class="lead"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
                                 class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
                                 class="bi bi-star-half"></i></p>
-                        <p class="text-danger fw-bold fs-4">₹ 150/-</p>
-                        <button type="button" class="btn btn-warning" id="liveToastBtn">Add Card</button>
+                        <p class="text-danger fw-bold fs-4" id="chickenBiriyaniPrice">₹ 150/-</p>
+                        <button type="button" class="btn btn-warning" id="" onclick="liveAlertBtn('chickenBiriyaniTitle', 'chickenBiriyaniPrice')">Add Card</button>
                     </div>
                 </div>
             </div>
@@ -263,13 +261,13 @@
                             style="height: 100%;" class="img-fluid" alt="">
                     </div>
                     <div class="col-12 col-md-6">
-                        <h1 class="fw-bold">Egg Biriyani</h1>
+                        <h1 class="fw-bold" id="eggBiriyaniTitle">Egg Biriyani</h1>
                         <p class="lead fs-6">Great way to make your business appear trust and relevant</p>
                         <p class="lead"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
                                 class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
                                 class="bi bi-star-half"></i></p>
-                        <p class="text-danger fw-bold fs-4">₹ 100/-</p>
-                        <button type="button" class="btn btn-warning" id="liveToastBtn">Add Card</button>
+                        <p class="text-danger fw-bold fs-4" id="eggBiriyanPrice">₹ 100/-</p>
+                        <button type="button" class="btn btn-warning" id="" onclick="liveAlertBtn('eggBiriyaniTitle', 'eggBiriyanPrice')">Add Card</button>
                     </div>
                 </div>
             </div>
@@ -280,13 +278,13 @@
                             style="height: 100%;" class="img-fluid" alt="">
                     </div>
                     <div class="col-12 col-md-6">
-                        <h1 class="fw-bold">Fish Biriyani</h1>
+                        <h1 class="fw-bold" id="fishBiriyaniTitle">Fish Biriyani</h1>
                         <p class="lead fs-6">Great way to make your business appear trust and relevant</p>
                         <p class="lead"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
                                 class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
                                 class="bi bi-star-half"></i></p>
-                        <p class="text-danger fw-bold fs-4">₹ 130/-</p>
-                        <button type="button" class="btn btn-warning" id="liveToastBtn">Add Card</button>
+                        <p class="text-danger fw-bold fs-4" id="fishBiriyanPrice">₹ 130/-</p>
+                        <button type="button" class="btn btn-warning" id="" onclick="liveAlertBtn('fishBiriyaniTitle', 'fishBiriyanPrice')">Add Card</button>
                     </div>
                 </div>
             </div>
@@ -297,13 +295,13 @@
                             style="height: 100%;" class="img-fluid" alt="">
                     </div>
                     <div class="col-12 col-md-6">
-                        <h1 class="fw-bold">Mutton Biriyani</h1>
+                        <h1 class="fw-bold" id="muttonBiriyaniTitle">Mutton Biriyani</h1>
                         <p class="lead fs-6">Great way to make your business appear trust and relevant</p>
                         <p class="lead"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
                                 class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
                                 class="bi bi-star-half"></i></p>
-                        <p class="text-danger fw-bold fs-4">₹ 200/-</p>
-                        <button type="button" class="btn btn-warning" id="liveToastBtn">Add Card</button>
+                        <p class="text-danger fw-bold fs-4" id="muttonBiriyanPrice">₹ 200/-</p>
+                        <button type="button" class="btn btn-warning" id="" onclick="liveAlertBtn('muttonBiriyaniTitle', 'muttonBiriyanPrice')">Add Card</button>
                     </div>
                 </div>
             </div>
@@ -317,13 +315,13 @@
                             style="height: 100%;" class="img-fluid" alt="">
                     </div>
                     <div class="col-12 col-md-6">
-                        <h1 class="fw-bold">Chicken Rice</h1>
+                        <h1 class="fw-bold" id="chickenRiceTitle">Chicken Rice</h1>
                         <p class="lead fs-6">Great way to make your business appear trust and relevant</p>
                         <p class="lead"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
                                 class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
                                 class="bi bi-star-half"></i></p>
-                        <p class="text-danger fw-bold fs-4">₹ 110/-</p>
-                        <button type="button" class="btn btn-warning" id="liveToastBtn">Add Card</button>
+                        <p class="text-danger fw-bold fs-4" id="chickenRicePrice">₹ 110/-</p>
+                        <button type="button" class="btn btn-warning" id="" onclick="liveAlertBtn('chickenRiceTitle', 'chickenRicePrice')">Add Card</button>
                     </div>
                 </div>
             </div>
@@ -334,13 +332,13 @@
                             style="height: 100%;" class="img-fluid" alt="">
                     </div>
                     <div class="col-12 col-md-6">
-                        <h1 class="fw-bold">Egg Rice</h1>
+                        <h1 class="fw-bold" id="eggRiceTitle">Egg Rice</h1>
                         <p class="lead fs-6">Great way to make your business appear trust and relevant</p>
                         <p class="lead"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
                                 class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
                                 class="bi bi-star-half"></i></p>
-                        <p class="text-danger fw-bold fs-4">₹ 80/-</p>
-                        <button type="button" class="btn btn-warning" id="liveToastBtn">Add Card</button>
+                        <p class="text-danger fw-bold fs-4" id="eggRicePrice">₹ 80/-</p>
+                        <button type="button" class="btn btn-warning" id="" onclick="liveAlertBtn('eggRiceTitle', 'eggRicePrice')">Add Card</button>
                     </div>
                 </div>
             </div>
@@ -351,13 +349,13 @@
                             style="height: 100%;" class="img-fluid" alt="">
                     </div>
                     <div class="col-12 col-md-6">
-                        <h1 class="fw-bold">Fish Rice</h1>
+                        <h1 class="fw-bold" id="fishRiceTitle">Fish Rice</h1>
                         <p class="lead fs-6">Great way to make your business appear trust and relevant</p>
                         <p class="lead"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
                                 class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
                                 class="bi bi-star-half"></i></p>
-                        <p class="text-danger fw-bold fs-4">₹ 130/-</p>
-                        <button type="button" class="btn btn-warning" id="liveToastBtn">Add Card</button>
+                        <p class="text-danger fw-bold fs-4" id="fishRicePrice">₹ 130/-</p>
+                        <button type="button" class="btn btn-warning" id="" onclick="liveAlertBtn('fishRiceTitle', 'fishRicePrice')">Add Card</button>
                     </div>
                 </div>
             </div>
@@ -368,13 +366,13 @@
                             style="height: 100%;" class="img-fluid" alt="">
                     </div>
                     <div class="col-12 col-md-6">
-                        <h1 class="fw-bold">Prawn Rice</h1>
+                        <h1 class="fw-bold" id="prawnRiceTitle">Prawn Rice</h1>
                         <p class="lead fs-6">Great way to make your business appear trust and relevant</p>
                         <p class="lead"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
                                 class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
                                 class="bi bi-star-half"></i></p>
-                        <p class="text-danger fw-bold fs-4">₹ 150/-</p>
-                        <button type="button" class="btn btn-warning" id="liveToastBtn">Add Card</button>
+                        <p class="text-danger fw-bold fs-4" id="prawnRicePrice">₹ 150/-</p>
+                        <button type="button" class="btn btn-warning" id="" onclick="liveAlertBtn('prawnRiceTitle', 'prawnRicePrice')">Add Card</button>
                     </div>
                 </div>
             </div>
@@ -614,27 +612,23 @@
             </div>
         </div>
     </footer>
-    <div class="toast-container position-fixed bottom-0 end-0 p-3">
-      <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
-        <div class="toast-header">
-          <strong class="me-auto">Food</strong>
-          <small>Now</small>
-          <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
-        </div>
-        <div class="toast-body">
-          Your order successfull placed.
-        </div>
-      </div>
-    </div>
+    <div class="position-fixed bottom-0 end-0"><div id="liveAlertPlaceholder"></div></div>
     <script>
-        const toastTrigger = document.getElementById('liveToastBtn')
-        const toastLiveExample = document.getElementById('liveToast')
-
-        if (toastTrigger) {
-            const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample)
-            toastTrigger.addEventListener('click', () => {
-                toastBootstrap.show()
-            })
+        function liveAlertBtn(foodTitleId, foodPriceId) {
+            const foodTitle = document.getElementById(foodTitleId).textContent;
+            const foodPrice = document.getElementById(foodPriceId).textContent;
+            const alertPlaceholder = document.getElementById('liveAlertPlaceholder')
+            const appendAlert = (message, type) => {
+                const wrapper = document.createElement('div')
+                wrapper.innerHTML = [
+                    `<div class="alert alert-${type} alert-dismissible" role="alert">`,
+                    `<div>${message}</div>`,
+                    `<button type="button" class="btn-close" data-bs-dismiss="alert"></button>`,
+                    `</div>`
+                ].join('')
+                alertPlaceholder.append(wrapper)
+            }
+            appendAlert(`Your Order ${foodTitle}, cost is ${foodPrice}`, 'success')
         }
     </script>
 </body>
