@@ -73,3 +73,36 @@ body {
 .bi-star{
     color: #e6e600;
 }
+
+
+
+.box-left{
+    animation: box-left 1s linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 30%;
+}
+.box-right{
+    animation: box-right 1s linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 30%;
+}
+@keyframes box-left {
+    from{
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    to{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+@keyframes box-right {
+    from{
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    to{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
