@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="./Assat/Own/Css/style.css">
     <link rel="stylesheet" href="./Assat/Bootsrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <script src="./Assat/Own/Js/script.js"></script>
+    <script defer src="./Assat/Own/Js/script.js"></script>
     <script src="./Assat/Bootsrap/js/bootstrap.min.js"></script>
     <script src="./Assat/Bootsrap/js/bootstrap.bundle.min.js"></script>
     <script src="./Assat/Bootsrap/js/jquary.min.js"></script>
@@ -44,18 +44,35 @@
                     <li class="nav-item"><a class="nav-link" href="#ratingPage">Top Rating</a></li>
                     <li class="nav-item"><a class="nav-link" href="#menuPage">Menu</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contactPage">Contact</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Help</a></li>
+                    <li class="nav-item" type="button" data-bs-target="#canvasOrder" data-bs-toggle="offcanvas"><a class="nav-link" onclick="order()">Order</a></li>
                 </ul>
                 <form role="search">
                     <input class="form-control me-2" type="search" list="searchList" placeholder="Search">
                     <datalist id="searchList">
                         <option value="Burger">
                         <option value="Pizza">
+                        <option value="Biriyani">
+                        <option value="Vareity Rice">
                     </datalist>
                 </form>
             </nav>
         </div>
     </header>
+    <div class="offcanvas offcanvas-end offcanvas-dark text-bg-dark" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="canvasOrder">
+        <div class="offcanvas-header">
+            <h3 class="text-warning fw-bold text-center">Your Order</h3>
+            <button class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body position-relative">
+            <div class="order-list">
+                <div id="orderPlace"></div>
+            </div>
+        </div>
+        <div class="offcanvas-footer p-3 d-flex justify-content-between align-items-center text-bg-light" id="orderPlace1">
+            <h4 class="left">Total</h4>
+            <h4 class="left" id="totalOrderPrice">0.0</h4>
+        </div>
+    </div>
     <section class="container-fluid page-1" id="homePage">
         <div class="position-relative p-5">
             <div class="row mt-5">
@@ -99,16 +116,17 @@
             <div class="col-12 col-md-6">
                 <div class="row box-left">
                     <div class="col-12 col-md-6">
-                        <img src="https://cdn.pixabay.com/photo/2024/04/27/12/41/ai-generated-8723664_640.png" style="height: 100%;"
-                            class="img-fluid" alt="">
+                        <img src="https://cdn.pixabay.com/photo/2024/04/27/12/41/ai-generated-8723664_640.png"
+                            style="height: 100%;" class="img-fluid" alt="">
                     </div>
                     <div class="col-12 col-md-6">
                         <h1 class="fw-bold" id="chickeBurgerTitle">Chicken Burger</h1>
                         <p class="lead fs-6">Great way to make your business appear trust and relevant</p>
                         <p class="lead"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                                class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i></p>
-                        <p class="text-danger fw-bold fs-4" id="chickeBurgerPrice">₹ 100/-</p>
-                        <button type="button" class="btn btn-warning" id="" onclick="liveAlertBtn('chickeBurgerTitle', 'chickeBurgerPrice')">Add Card</button>
+                                class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                class="bi bi-star-half"></i></p>
+                        <p class="text-danger fw-bold fs-4">₹ <span id="chickeBurgerPrice">100</span> /-</p>
+                        <button type="button" class="btn btn-warning" onclick="liveAlertBtn('chickeBurgerTitle', 'chickeBurgerPrice')">Add Card</button>
                     </div>
                 </div>
             </div>
@@ -124,8 +142,9 @@
                         <p class="lead"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
                                 class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
                                 class="bi bi-star-half"></i></p>
-                        <p class="text-danger fw-bold fs-4" id="spicyBurgerPrice">₹ 150/-</p>
-                        <button type="button" class="btn btn-warning" id="" onclick="liveAlertBtn('spicyBurgerTitle', 'spicyBurgerPrice')">Add Card</button>
+                        <p class="text-danger fw-bold fs-4">₹ <span id="spicyBurgerPrice">150</span> /-</p>
+                        <button type="button" class="btn btn-warning" id=""
+                            onclick="liveAlertBtn('spicyBurgerTitle', 'spicyBurgerPrice')">Add Card</button>
                     </div>
                 </div>
             </div>
@@ -141,8 +160,9 @@
                         <p class="lead"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
                                 class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
                                 class="bi bi-star-half"></i></p>
-                        <p class="text-danger fw-bold fs-4" id="eggBurgerPrice">₹ 80/-</p>
-                        <button type="button" class="btn btn-warning" id="" onclick="liveAlertBtn('eggBurgerTitle', 'eggBurgerPrice')">Add Card</button>
+                        <p class="text-danger fw-bold fs-4">₹ <span id="eggBurgerPrice">80</span>/-</p>
+                        <button type="button" class="btn btn-warning" id=""
+                            onclick="liveAlertBtn('eggBurgerTitle', 'eggBurgerPrice')">Add Card</button>
                     </div>
                 </div>
             </div>
@@ -158,8 +178,9 @@
                         <p class="lead"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
                                 class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
                                 class="bi bi-star-half"></i></p>
-                        <p class="text-danger fw-bold fs-4" id="cheeseBurgerPrice">₹ 70/-</p>
-                        <button type="button" class="btn btn-warning" id="" onclick="liveAlertBtn('cheeseBurgerTitle', 'cheeseBurgerPrice')">Add Card</button>
+                        <p class="text-danger fw-bold fs-4">₹ <span id="cheeseBurgerPrice">70</span>/-</p>
+                        <button type="button" class="btn btn-warning" id=""
+                            onclick="liveAlertBtn('cheeseBurgerTitle', 'cheeseBurgerPrice')">Add Card</button>
                     </div>
                 </div>
             </div>
@@ -178,8 +199,9 @@
                         <p class="lead"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
                                 class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
                                 class="bi bi-star-half"></i></p>
-                        <p class="text-danger fw-bold fs-4" id="chickenPizzaPrice">₹ 180/-</p>
-                        <button type="button" class="btn btn-warning" id="" onclick="liveAlertBtn('chickenPizzaTitle', 'chickenPizzaPrice')">Add Card</button>
+                        <p class="text-danger fw-bold fs-4">₹ <span id="chickenPizzaPrice">180</span>/-</p>
+                        <button type="button" class="btn btn-warning" id=""
+                            onclick="liveAlertBtn('chickenPizzaTitle', 'chickenPizzaPrice')">Add Card</button>
                     </div>
                 </div>
             </div>
@@ -195,8 +217,9 @@
                         <p class="lead"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
                                 class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
                                 class="bi bi-star-half"></i></p>
-                        <p class="text-danger fw-bold fs-4" id="eggPizzaPrice">₹ 120/-</p>
-                        <button type="button" class="btn btn-warning" id="" onclick="liveAlertBtn('eggPizzaTitle', 'eggPizzaPrice')">Add Card</button>
+                        <p class="text-danger fw-bold fs-4">₹ <span id="eggPizzaPrice">120</span>/-</p>
+                        <button type="button" class="btn btn-warning" id=""
+                            onclick="liveAlertBtn('eggPizzaTitle', 'eggPizzaPrice')">Add Card</button>
                     </div>
                 </div>
             </div>
@@ -212,8 +235,9 @@
                         <p class="lead"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
                                 class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
                                 class="bi bi-star-half"></i></p>
-                        <p class="text-danger fw-bold fs-4" id="prawnPizzaPrice">₹ 230/-</p>
-                        <button type="button" class="btn btn-warning" id="" onclick="liveAlertBtn('prawnPizzaTitle', 'chickenPizzaPrice')">Add Card</button>
+                        <p class="text-danger fw-bold fs-4">₹ <span id="prawnPizzaPrice">230</span>/-</p>
+                        <button type="button" class="btn btn-warning" id=""
+                            onclick="liveAlertBtn('prawnPizzaTitle', 'chickenPizzaPrice')">Add Card</button>
                     </div>
                 </div>
             </div>
@@ -229,8 +253,9 @@
                         <p class="lead"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
                                 class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
                                 class="bi bi-star-half"></i></p>
-                        <p class="text-danger fw-bold fs-4" id="cheesePizzaPrice">₹ 100/-</p>
-                        <button type="button" class="btn btn-warning" id="" onclick="liveAlertBtn('cheesePizzaTitle', 'cheesePizzaPrice')">Add Card</button>
+                        <p class="text-danger fw-bold fs-4">₹ <span id="cheesePizzaPrice">100</span>/-</p>
+                        <button type="button" class="btn btn-warning" id=""
+                            onclick="liveAlertBtn('cheesePizzaTitle', 'cheesePizzaPrice')">Add Card</button>
                     </div>
                 </div>
             </div>
@@ -249,8 +274,9 @@
                         <p class="lead"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
                                 class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
                                 class="bi bi-star-half"></i></p>
-                        <p class="text-danger fw-bold fs-4" id="chickenBiriyaniPrice">₹ 150/-</p>
-                        <button type="button" class="btn btn-warning" id="" onclick="liveAlertBtn('chickenBiriyaniTitle', 'chickenBiriyaniPrice')">Add Card</button>
+                        <p class="text-danger fw-bold fs-4">₹ <span id="chickenBiriyaniPrice">150</span>/-</p>
+                        <button type="button" class="btn btn-warning" id=""
+                            onclick="liveAlertBtn('chickenBiriyaniTitle', 'chickenBiriyaniPrice')">Add Card</button>
                     </div>
                 </div>
             </div>
@@ -266,8 +292,9 @@
                         <p class="lead"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
                                 class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
                                 class="bi bi-star-half"></i></p>
-                        <p class="text-danger fw-bold fs-4" id="eggBiriyanPrice">₹ 100/-</p>
-                        <button type="button" class="btn btn-warning" id="" onclick="liveAlertBtn('eggBiriyaniTitle', 'eggBiriyanPrice')">Add Card</button>
+                        <p class="text-danger fw-bold fs-4">₹ <span id="eggBiriyanPrice">100</span>/-</p>
+                        <button type="button" class="btn btn-warning" id=""
+                            onclick="liveAlertBtn('eggBiriyaniTitle', 'eggBiriyanPrice')">Add Card</button>
                     </div>
                 </div>
             </div>
@@ -283,8 +310,9 @@
                         <p class="lead"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
                                 class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
                                 class="bi bi-star-half"></i></p>
-                        <p class="text-danger fw-bold fs-4" id="fishBiriyanPrice">₹ 130/-</p>
-                        <button type="button" class="btn btn-warning" id="" onclick="liveAlertBtn('fishBiriyaniTitle', 'fishBiriyanPrice')">Add Card</button>
+                        <p class="text-danger fw-bold fs-4">₹ <span id="fishBiriyanPrice">130</span>/-</p>
+                        <button type="button" class="btn btn-warning" id=""
+                            onclick="liveAlertBtn('fishBiriyaniTitle', 'fishBiriyanPrice')">Add Card</button>
                     </div>
                 </div>
             </div>
@@ -300,8 +328,9 @@
                         <p class="lead"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
                                 class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
                                 class="bi bi-star-half"></i></p>
-                        <p class="text-danger fw-bold fs-4" id="muttonBiriyanPrice">₹ 200/-</p>
-                        <button type="button" class="btn btn-warning" id="" onclick="liveAlertBtn('muttonBiriyaniTitle', 'muttonBiriyanPrice')">Add Card</button>
+                        <p class="text-danger fw-bold fs-4">₹ <span id="muttonBiriyanPrice">200</span>/-</p>
+                        <button type="button" class="btn btn-warning" id=""
+                            onclick="liveAlertBtn('muttonBiriyaniTitle', 'muttonBiriyanPrice')">Add Card</button>
                     </div>
                 </div>
             </div>
@@ -320,8 +349,9 @@
                         <p class="lead"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
                                 class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
                                 class="bi bi-star-half"></i></p>
-                        <p class="text-danger fw-bold fs-4" id="chickenRicePrice">₹ 110/-</p>
-                        <button type="button" class="btn btn-warning" id="" onclick="liveAlertBtn('chickenRiceTitle', 'chickenRicePrice')">Add Card</button>
+                        <p class="text-danger fw-bold fs-4">₹ <span id="chickenRicePrice">110</span>/-</p>
+                        <button type="button" class="btn btn-warning" id=""
+                            onclick="liveAlertBtn('chickenRiceTitle', 'chickenRicePrice')">Add Card</button>
                     </div>
                 </div>
             </div>
@@ -337,8 +367,9 @@
                         <p class="lead"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
                                 class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
                                 class="bi bi-star-half"></i></p>
-                        <p class="text-danger fw-bold fs-4" id="eggRicePrice">₹ 80/-</p>
-                        <button type="button" class="btn btn-warning" id="" onclick="liveAlertBtn('eggRiceTitle', 'eggRicePrice')">Add Card</button>
+                        <p class="text-danger fw-bold fs-4">₹ <span id="eggRicePrice">80</span>/-</p>
+                        <button type="button" class="btn btn-warning" id=""
+                            onclick="liveAlertBtn('eggRiceTitle', 'eggRicePrice')">Add Card</button>
                     </div>
                 </div>
             </div>
@@ -354,8 +385,9 @@
                         <p class="lead"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
                                 class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
                                 class="bi bi-star-half"></i></p>
-                        <p class="text-danger fw-bold fs-4" id="fishRicePrice">₹ 130/-</p>
-                        <button type="button" class="btn btn-warning" id="" onclick="liveAlertBtn('fishRiceTitle', 'fishRicePrice')">Add Card</button>
+                        <p class="text-danger fw-bold fs-4">₹ <span id="fishRicePrice">130</span>/-</p>
+                        <button type="button" class="btn btn-warning" id=""
+                            onclick="liveAlertBtn('fishRiceTitle', 'fishRicePrice')">Add Card</button>
                     </div>
                 </div>
             </div>
@@ -371,8 +403,9 @@
                         <p class="lead"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
                                 class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
                                 class="bi bi-star-half"></i></p>
-                        <p class="text-danger fw-bold fs-4" id="prawnRicePrice">₹ 150/-</p>
-                        <button type="button" class="btn btn-warning" id="" onclick="liveAlertBtn('prawnRiceTitle', 'prawnRicePrice')">Add Card</button>
+                        <p class="text-danger fw-bold fs-4">₹ <span id="prawnRicePrice">150</span>/-</p>
+                        <button type="button" class="btn btn-warning" id=""
+                            onclick="liveAlertBtn('prawnRiceTitle', 'prawnRicePrice')">Add Card</button>
                     </div>
                 </div>
             </div>
@@ -384,13 +417,15 @@
         <div class="row" style="height: 80%;">
             <div class="col-12 col-md-6 position-relative">
                 <div class="row p-2 h-100">
-                    <p class="lead fs-5 d-flex flex-column align-self-start">Are you a food lover? If your answer is yes, then in restaurant for you. We serve foods for reasonable prices. It's awesone, we know.
+                    <p class="lead fs-5 d-flex flex-column align-self-start">Are you a food lover? If your answer is
+                        yes, then in restaurant for you. We serve foods for reasonable prices. It's awesone, we know.
                     </p>
-                    <p class="display-4 text-center d-flex flex-column align-self-center justify-content-center text-danger my-5">
+                    <p
+                        class="display-4 text-center d-flex flex-column align-self-center justify-content-center text-danger my-5">
                         TASTYC <br /><span class="lead h1">RESTAURANT</span></p>
                     <div class="row">
                         <p class="col-12 col-sm-6">vikramkumaru28@gmail.com</p>
-                        <p class="col-12 col-sm-4 offset-md-2"><i class="fa-solid fa-phone-volume"></i> +91 123456789
+                        <p class="col-12 col-sm-4 offset-md-2"><i class="fa-solid fa-phone-volume"></i> +91 9514945463
                         </p>
                     </div>
                 </div>
@@ -453,7 +488,8 @@
                                     <input type="reset" class="btn btn-danger" value="Reset">
                                 </div>
                                 <div class="col-6 d-grid">
-                                    <input type="submit" class="btn btn-primary" value="Submit" onclick="contactSubmit()">
+                                    <input type="submit" class="btn btn-primary" value="Submit"
+                                        onclick="contactSubmit()">
                                 </div>
                             </div>
                         </form>
@@ -612,25 +648,9 @@
             </div>
         </div>
     </footer>
-    <div class="position-fixed bottom-0 end-0"><div id="liveAlertPlaceholder"></div></div>
-    <script>
-        function liveAlertBtn(foodTitleId, foodPriceId) {
-            const foodTitle = document.getElementById(foodTitleId).textContent;
-            const foodPrice = document.getElementById(foodPriceId).textContent;
-            const alertPlaceholder = document.getElementById('liveAlertPlaceholder')
-            const appendAlert = (message, type) => {
-                const wrapper = document.createElement('div')
-                wrapper.innerHTML = [
-                    `<div class="alert alert-${type} alert-dismissible" role="alert">`,
-                    `<div>${message}</div>`,
-                    `<button type="button" class="btn-close" data-bs-dismiss="alert"></button>`,
-                    `</div>`
-                ].join('')
-                alertPlaceholder.append(wrapper)
-            }
-            appendAlert(`Your Order ${foodTitle}, cost is ${foodPrice}`, 'success')
-        }
-    </script>
+    <div class="position-fixed bottom-0 end-0">
+        <div id="liveAlertPlaceholder"></div>
+    </div>
 </body>
 
 </html>
