@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./Assat/Own/Css/style.css">
     <link rel="stylesheet" href="./Assat/Bootsrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
     <script defer src="./Assat/Own/Js/script.js"></script>
     <script src="./Assat/Bootsrap/js/bootstrap.min.js"></script>
     <script src="./Assat/Bootsrap/js/bootstrap.bundle.min.js"></script>
@@ -30,35 +31,38 @@
 </style>
 
 <body>
-    <header class="container-fluid navbar navbar-expand-lg navbar-dark fixed-top bg-dark">
-        <div class="container-fluid">
-            <a class="navbar-brand ms-3" href="#">TASTYC</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbars"
-                aria-controls="navbarsExample03" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <nav class="collapse navbar-collapse" id="navbars">
-                <ul class="navbar-nav ms-auto mb-2 pe-3 mb-sm-0">
-                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="#homePage">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#aboutPage">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#ratingPage">Top Rating</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#menuPage">Menu</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contactPage">Contact</a></li>
-                    <li class="nav-item" type="button" data-bs-target="#canvasOrder" data-bs-toggle="offcanvas"><a class="nav-link" onclick="order()">Order</a></li>
-                </ul>
-                <form role="search">
-                    <input class="form-control me-2" type="search" list="searchList" placeholder="Search">
-                    <datalist id="searchList">
-                        <option value="Burger">
-                        <option value="Pizza">
-                        <option value="Biriyani">
-                        <option value="Vareity Rice">
-                    </datalist>
-                </form>
-            </nav>
-        </div>
-    </header>
-    <div class="offcanvas offcanvas-end offcanvas-dark text-bg-dark" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="canvasOrder">
+    <section class="container-fluid active">
+        <header class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand ms-3" href="#">TASTYC</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbars"
+                    aria-controls="navbarsExample03" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <nav class="navbar-collapse collapse" id="navbars">
+                    <ul class="navbar-nav ms-auto mb-2 me-5 pe-3 mb-sm-0">
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="#homePage">Home</a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="#aboutPage">About</a></li>
+                        <!-- <li class="nav-item"><a class="nav-link" href="#ratingPage">Top Rating</a></li> -->
+                        <li class="nav-item"><a class="nav-link" href="#menuPage">Menu</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contactPage">Contact</a></li>
+                    </ul>
+                    <form role="search">
+                        <input class="form-control me-2" type="search" list="searchList" placeholder="Search">
+                        <datalist id="searchList">
+                            <option value="Burger">
+                            <option value="Pizza">
+                            <option value="Biriyani">
+                            <option value="Vareity Rice">
+                        </datalist>
+                    </form>
+                </nav>
+            </div>
+        </header>
+    </section>
+    <div class="offcanvas offcanvas-end offcanvas-dark text-bg-dark" data-bs-scroll="true" data-bs-backdrop="false"
+        tabindex="-1" id="canvasOrder">
         <div class="offcanvas-header">
             <h3 class="text-warning fw-bold text-center">Your Order</h3>
             <button class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
@@ -68,7 +72,8 @@
                 <div id="orderPlace"></div>
             </div>
         </div>
-        <div class="offcanvas-footer p-3 d-flex justify-content-between align-items-center text-bg-light" id="orderPlace1">
+        <div class="offcanvas-footer p-3 d-flex justify-content-between align-items-center text-bg-light"
+            id="orderPlace1">
             <h4 class="left">Total</h4>
             <h4 class="left" id="totalOrderPrice">0.0</h4>
         </div>
@@ -126,7 +131,8 @@
                                 class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
                                 class="bi bi-star-fill"></i></p>
                         <p class="text-danger fw-bold fs-4">₹ <span id="chickeBurgerPrice">100</span> /-</p>
-                        <button type="button" class="btn btn-warning" onclick="liveAlertBtn('chickeBurgerTitle', 'chickeBurgerPrice')">Add Card</button>
+                        <button type="button" class="btn btn-warning"
+                            onclick="liveAlertBtn('chickeBurgerTitle', 'chickeBurgerPrice')">Add Card</button>
                     </div>
                 </div>
             </div>
@@ -158,8 +164,8 @@
                         <h1 class="fw-bold" id="eggBurgerTitle">Egg Burger</h1>
                         <p class="lead fs-6">Great way to make your business appear trust and relevant</p>
                         <p class="lead"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                                class="bi bi-star-fill"></i><i class="bi bi-star-half"></i><i
-                                class="bi bi-star"></i></p>
+                                class="bi bi-star-fill"></i><i class="bi bi-star-half"></i><i class="bi bi-star"></i>
+                        </p>
                         <p class="text-danger fw-bold fs-4">₹ <span id="eggBurgerPrice">80</span>/-</p>
                         <button type="button" class="btn btn-warning" id=""
                             onclick="liveAlertBtn('eggBurgerTitle', 'eggBurgerPrice')">Add Card</button>
@@ -176,8 +182,7 @@
                         <h1 class="fw-bold" id="cheeseBurgerTitle">Cheese Burger</h1>
                         <p class="lead fs-6">Great way to make your business appear trust and relevant</p>
                         <p class="lead"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                                class="bi bi-star-fill"></i><i class="bi bi-star"></i><i
-                                class="bi bi-star"></i></p>
+                                class="bi bi-star-fill"></i><i class="bi bi-star"></i><i class="bi bi-star"></i></p>
                         <p class="text-danger fw-bold fs-4">₹ <span id="cheeseBurgerPrice">70</span>/-</p>
                         <button type="button" class="btn btn-warning" id=""
                             onclick="liveAlertBtn('cheeseBurgerTitle', 'cheeseBurgerPrice')">Add Card</button>
@@ -215,8 +220,8 @@
                         <h1 class="fw-bold" id="eggPizzaTitle">Egg Pizza</h1>
                         <p class="lead fs-6">Great way to make your business appear trust and relevant</p>
                         <p class="lead"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                                class="bi bi-star-fill"></i><i class="bi bi-star-half"></i><i
-                                class="bi bi-star"></i></p>
+                                class="bi bi-star-fill"></i><i class="bi bi-star-half"></i><i class="bi bi-star"></i>
+                        </p>
                         <p class="text-danger fw-bold fs-4">₹ <span id="eggPizzaPrice">120</span>/-</p>
                         <button type="button" class="btn btn-warning" id=""
                             onclick="liveAlertBtn('eggPizzaTitle', 'eggPizzaPrice')">Add Card</button>
@@ -233,8 +238,7 @@
                         <h1 class="fw-bold" id="prawnPizzaTitle">Prawn Pizza</h1>
                         <p class="lead fs-6">Great way to make your business appear trust and relevant</p>
                         <p class="lead"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                                class="bi bi-star-fill"></i><i class="bi bi-star"></i><i
-                                class="bi bi-star"></i></p>
+                                class="bi bi-star-fill"></i><i class="bi bi-star"></i><i class="bi bi-star"></i></p>
                         <p class="text-danger fw-bold fs-4">₹ <span id="prawnPizzaPrice">230</span>/-</p>
                         <button type="button" class="btn btn-warning" id=""
                             onclick="liveAlertBtn('prawnPizzaTitle', 'chickenPizzaPrice')">Add Card</button>
@@ -251,8 +255,7 @@
                         <h1 class="fw-bold" id="cheesePizzaTitle">Cheese Pizza</h1>
                         <p class="lead fs-6">Great way to make your business appear trust and relevant</p>
                         <p class="lead"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                                class="bi bi-star-half"></i><i class="bi bi-star"></i><i
-                                class="bi bi-star"></i></p>
+                                class="bi bi-star-half"></i><i class="bi bi-star"></i><i class="bi bi-star"></i></p>
                         <p class="text-danger fw-bold fs-4">₹ <span id="cheesePizzaPrice">100</span>/-</p>
                         <button type="button" class="btn btn-warning" id=""
                             onclick="liveAlertBtn('cheesePizzaTitle', 'cheesePizzaPrice')">Add Card</button>
@@ -290,8 +293,8 @@
                         <h1 class="fw-bold" id="eggBiriyaniTitle">Egg Biriyani</h1>
                         <p class="lead fs-6">Great way to make your business appear trust and relevant</p>
                         <p class="lead"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                                class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                                class="bi bi-star"></i></p>
+                                class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i>
+                        </p>
                         <p class="text-danger fw-bold fs-4">₹ <span id="eggBiriyanPrice">100</span>/-</p>
                         <button type="button" class="btn btn-warning" id=""
                             onclick="liveAlertBtn('eggBiriyaniTitle', 'eggBiriyanPrice')">Add Card</button>
@@ -308,8 +311,8 @@
                         <h1 class="fw-bold" id="fishBiriyaniTitle">Fish Biriyani</h1>
                         <p class="lead fs-6">Great way to make your business appear trust and relevant</p>
                         <p class="lead"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                                class="bi bi-star-fill"></i><i class="bi bi-star-half"></i><i
-                                class="bi bi-star"></i></p>
+                                class="bi bi-star-fill"></i><i class="bi bi-star-half"></i><i class="bi bi-star"></i>
+                        </p>
                         <p class="text-danger fw-bold fs-4">₹ <span id="fishBiriyanPrice">130</span>/-</p>
                         <button type="button" class="btn btn-warning" id=""
                             onclick="liveAlertBtn('fishBiriyaniTitle', 'fishBiriyanPrice')">Add Card</button>
@@ -326,8 +329,8 @@
                         <h1 class="fw-bold" id="muttonBiriyaniTitle">Mutton Biriyani</h1>
                         <p class="lead fs-6">Great way to make your business appear trust and relevant</p>
                         <p class="lead"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                                class="bi bi-star-fill"></i><i class="bi bi-star-half"></i><i
-                                class="bi bi-star"></i></p>
+                                class="bi bi-star-fill"></i><i class="bi bi-star-half"></i><i class="bi bi-star"></i>
+                        </p>
                         <p class="text-danger fw-bold fs-4">₹ <span id="muttonBiriyanPrice">200</span>/-</p>
                         <button type="button" class="btn btn-warning" id=""
                             onclick="liveAlertBtn('muttonBiriyaniTitle', 'muttonBiriyanPrice')">Add Card</button>
@@ -365,8 +368,8 @@
                         <h1 class="fw-bold" id="eggRiceTitle">Egg Rice</h1>
                         <p class="lead fs-6">Great way to make your business appear trust and relevant</p>
                         <p class="lead"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                                class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                                class="bi bi-star"></i></p>
+                                class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i>
+                        </p>
                         <p class="text-danger fw-bold fs-4">₹ <span id="eggRicePrice">80</span>/-</p>
                         <button type="button" class="btn btn-warning" id=""
                             onclick="liveAlertBtn('eggRiceTitle', 'eggRicePrice')">Add Card</button>
@@ -383,8 +386,8 @@
                         <h1 class="fw-bold" id="fishRiceTitle">Fish Rice</h1>
                         <p class="lead fs-6">Great way to make your business appear trust and relevant</p>
                         <p class="lead"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                                class="bi bi-star-fill"></i><i class="bi bi-star-half"></i><i
-                                class="bi bi-star"></i></p>
+                                class="bi bi-star-fill"></i><i class="bi bi-star-half"></i><i class="bi bi-star"></i>
+                        </p>
                         <p class="text-danger fw-bold fs-4">₹ <span id="fishRicePrice">130</span>/-</p>
                         <button type="button" class="btn btn-warning" id=""
                             onclick="liveAlertBtn('fishRiceTitle', 'fishRicePrice')">Add Card</button>
@@ -401,8 +404,7 @@
                         <h1 class="fw-bold" id="prawnRiceTitle">Prawn Rice</h1>
                         <p class="lead fs-6">Great way to make your business appear trust and relevant</p>
                         <p class="lead"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                                class="bi bi-star-fill"></i><i class="bi bi-star"></i><i
-                                class="bi bi-star"></i></p>
+                                class="bi bi-star-fill"></i><i class="bi bi-star"></i><i class="bi bi-star"></i></p>
                         <p class="text-danger fw-bold fs-4">₹ <span id="prawnRicePrice">150</span>/-</p>
                         <button type="button" class="btn btn-warning" id=""
                             onclick="liveAlertBtn('prawnRiceTitle', 'prawnRicePrice')">Add Card</button>
@@ -437,11 +439,16 @@
                     referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </div>
-        <p class="text-end position-fixed bottom-0 end-0" role="button" data-bs-target="#contactForm"
-            data-bs-toggle="modal">
-            <img src="https://img.icons8.com/?size=100&id=13724&format=png&color=000000"
-                class="icon-chat rounded-pill p-2 bg-dark" alt="">
-        </p>
+        <div class="position-fixed bottom-0 end-0 d-flex flex-column gap-3">
+            <div class="nav-item" type="button" data-bs-target="#canvasOrder" data-bs-toggle="offcanvas">
+                <a onclick="order()"><img src="https://img.icons8.com/?size=100&id=8chNl15hy6jY&format=png&color=000000"
+                        class="icon-chat rounded-pill p-2 bg-warning-subtle border border-2 border-dark" alt=""></a>
+            </div>
+            <div class="text-center" role="button" data-bs-target="#contactForm" data-bs-toggle="modal">
+                <img src="https://img.icons8.com/?size=100&id=13724&format=png&color=000000"
+                    class="icon-chat rounded-pill p-2 bg-warning-subtle border border-2 border-dark" alt="">
+            </div>
+        </div>
         <div class="modal" id="contactForm" tabindex="-1">
             <div class="modal-dialog modal-diglog-sm">
                 <div class="modal-content">
