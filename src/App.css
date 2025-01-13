@@ -1,0 +1,36 @@
+main{
+    min-height: 60vh;
+}
+.mainPage{
+    background: url(./assets/Images/vegetables-background.jpg) center no-repeat;
+    background-size: cover;
+}
+.loading::after{
+    content: ".";
+    animation: loading 1s linear infinite;
+    animation-fill-mode: forwards;
+}
+@keyframes loading {
+    0%{content: "."}
+    50%{content: ".."}
+    100%{content: "..."}
+}
+.card{
+    height: 35rem;
+}
+.card-image{
+    min-width: 7rem;
+    max-width: 15rem;
+
+}
+.count-input{
+    outline: none;
+    border: none;
+}
+.cart-image{
+    width:  5rem;
+    mix-blend-mode: darken;
+}
+footer{
+    margin-top: -48px;
+}
