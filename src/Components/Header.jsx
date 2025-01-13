@@ -1,8 +1,8 @@
 import React from 'react'
 import { NavLink, Outlet } from 'react-router-dom'
-import { Nav } from 'react-bootstrap'
-import { Navbar } from 'react-bootstrap'
-import { Container } from 'react-bootstrap'
+import Nav from 'react-bootstrap/Nav'
+import Navbar from 'react-bootstrap/Navbar'
+import Container from 'react-bootstrap/Container'
 
 export const Header = () => {
   return (
