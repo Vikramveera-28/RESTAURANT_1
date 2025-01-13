@@ -14,18 +14,20 @@ const Card = ({item, itemOrder, category, changeFav}) => {
         }
     }
   return (
-    <div className="card position-relative">
-        <div className="card-img text-center h-50 overflow-hidden p-0">
-            <img src={item.Pic} alt="" className='card-image'/>
-            {item.fav ? <span className='position-absolute top-0 end-0' onClick={() => changeFav(item.id, false, category)}>❤</span> : <span className='position-absolute top-0 end-0' onClick={() => changeFav(item.id, true, category)}>🤍</span>}
-        </div>
+    <div className="card">
         <div className="card-header">
             <h4 className='text-center'>{item.name}</h4>
         </div>
+        <div className="card-img text-center h-50 overflow-hidden p-0 position-relative">
+            <img src={item.Pic} alt="" className='img-fluid'/>
+            {item.fav ? <span className='position-absolute top-0 end-0' onClick={() => changeFav(item.id, false, category)}>❤</span> : <span className='position-absolute top-0 end-0' onClick={() => changeFav(item.id, true, category)}>🤍</span>}
+        </div>
         <div className="card-body">
-            <p>{item.ftype==="Veg" ? <span className='badge bg-success'>{item.ftype}</span> : <span className='badge bg-danger'>{item.ftype}</span>}</p>
+            <div className="d-flex justify-content-between">
+                <p>{item.ftype==="Veg" ? <span className='badge bg-success'>{item.ftype}</span> : <span className='badge bg-danger'>{item.ftype}</span>}</p>
+                <p className='h5'>Price : <span className="badge bg-success">{item.price}</span></p>
+            </div>
             <p className="card-text">Greate way to make your order to delicious food to cart</p>
-            <p className='h5'>Price : <span className="badge bg-success">{item.price}</span></p>
         </div>
         <div className="card-footer position-absolute bottom-0 w-100 d-flex gap-2 justify-content-between p-2">
             <div className="d-flex">

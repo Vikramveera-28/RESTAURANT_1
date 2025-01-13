@@ -6,7 +6,7 @@ main{
     background-size: cover;
 }
 .loading::after{
-    content: ".";
+    content: "";
     animation: loading 1s linear infinite;
     animation-fill-mode: forwards;
 }
@@ -16,12 +16,7 @@ main{
     100%{content: "..."}
 }
 .card{
-    height: 35rem;
-}
-.card-image{
-    min-width: 7rem;
-    max-width: 15rem;
-
+    min-height: 30rem;
 }
 .count-input{
     outline: none;

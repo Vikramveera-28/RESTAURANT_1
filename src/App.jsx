@@ -62,7 +62,6 @@ function App() {
   }
   return (
     <>
-    <Header />
       <Suspense fallback={<Loading />}>
         <Routes>
             <Route path='/' element={<Header />}>
