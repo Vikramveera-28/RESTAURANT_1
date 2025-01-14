@@ -34,6 +34,11 @@ const Booking = () => {
             const newItem = {id:String(Id), name:Name, mobile:Mobile, email:Email, count:Count, category:Category}
             const response = await api.post("/bookingList", newItem)
             setBooking(response.data)
+            setName("")
+            setMobile("")
+            setEmail("")
+            setCount("")
+            alert("Successfully your table booked...")
         }
     }
   return (

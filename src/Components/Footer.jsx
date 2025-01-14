@@ -1,4 +1,5 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
 
 export const Footer = () => {
   return (
@@ -6,39 +7,24 @@ export const Footer = () => {
         <footer className="container">
             <div className="row">
             <div className="col-6 col-md-2 mb-3">
-                <h5>Section</h5>
+                <h5 className='text-warning'>Navigation</h5>
                 <ul className="nav flex-column">
-                <li className="nav-item mb-2"><a href="#" className="nav-link text-light p-0">Home</a></li>
-                <li className="nav-item mb-2"><a href="#" className="nav-link text-light p-0">Features</a></li>
-                <li className="nav-item mb-2"><a href="#" className="nav-link text-light p-0">Pricing</a></li>
-                <li className="nav-item mb-2"><a href="#" className="nav-link text-light p-0">FAQs</a></li>
-                <li className="nav-item mb-2"><a href="#" className="nav-link text-light p-0">About</a></li>
+                    <li className="nav-item"><NavLink className="nav-link text-light p-0" to={'/home'}>Home</NavLink></li>
+                    <li className="nav-item"><NavLink className="nav-link text-light p-0" to={'/about'}>About</NavLink></li>
+                    <li className="nav-item"><NavLink className="nav-link text-light p-0" to={'/contact'}>Contact</NavLink></li>
+                    <li className="nav-item"><NavLink className="nav-link text-light p-0" to={'/cart'}>Cart</NavLink></li>
                 </ul>
             </div>
 
             <div className="col-6 col-md-2 mb-3">
-                <h5>Section</h5>
+                <h5 className='text-warning'>Features</h5>
                 <ul className="nav flex-column">
-                <li className="nav-item mb-2"><a href="#" className="nav-link text-light p-0">Home</a></li>
-                <li className="nav-item mb-2"><a href="#" className="nav-link text-light p-0">Features</a></li>
-                <li className="nav-item mb-2"><a href="#" className="nav-link text-light p-0">Pricing</a></li>
-                <li className="nav-item mb-2"><a href="#" className="nav-link text-light p-0">FAQs</a></li>
-                <li className="nav-item mb-2"><a href="#" className="nav-link text-light p-0">About</a></li>
+                    <li className="nav-item"><NavLink className="nav-link text-light p-0" to={'/menu'}>Restaurant</NavLink></li>
+                    <li className="nav-item"><NavLink className="nav-link text-light p-0" to={'/booking'}>Table Booking</NavLink></li>
                 </ul>
             </div>
 
-            <div className="col-6 col-md-2 mb-3">
-                <h5>Section</h5>
-                <ul className="nav flex-column">
-                <li className="nav-item mb-2"><a href="#" className="nav-link text-light p-0">Home</a></li>
-                <li className="nav-item mb-2"><a href="#" className="nav-link text-light p-0">Features</a></li>
-                <li className="nav-item mb-2"><a href="#" className="nav-link text-light p-0">Pricing</a></li>
-                <li className="nav-item mb-2"><a href="#" className="nav-link text-light p-0">FAQs</a></li>
-                <li className="nav-item mb-2"><a href="#" className="nav-link text-light p-0">About</a></li>
-                </ul>
-            </div>
-
-            <div className="col-md-5 offset-md-1 mb-3">
+            <div className="col-md-6 offset-md-2 mb-3">
                 <form>
                 <h5 className='text-warning'>Subscribe to our newsletter</h5>
                 <p>Monthly digest of what's new and exciting from us.</p>

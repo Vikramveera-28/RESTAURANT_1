@@ -34,6 +34,11 @@ const Contact = () => {
         const newItem = {id:String(Id), name:Name, mobile:Mobile, email:Email, message:Message}
         const response = await api.post('/contactDetails', newItem)
         setContact(response.data)
+        setName("")
+        setMobile("")
+        setEmail("")
+        setMessage("")
+        alert("Feedback successfully sent...")
       }
     } catch (err) {
       console.log(err.message);

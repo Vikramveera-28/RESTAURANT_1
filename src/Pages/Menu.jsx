@@ -23,7 +23,7 @@ const Menu = ({products, itemOrder, changeFav}) => {
             </section>
           )
         })
-      ) : (<Loading />)}
+      ) : (<Loading />)}         
     </main>
   )
 }

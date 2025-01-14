@@ -2,13 +2,14 @@ import React from 'react'
 import Image from '../assets/Images/vegetables-background.jpg';
 import { Link } from 'react-router-dom';
 
-const Home = () => {
+const Home = ({userLogged}) => {
+    const UserName = userLogged[0]?.userName
   return (
     <main className="container-fluid mainPage" id="homePage">
         <div className="position-relative p-5">
             <div className="row mt-5">
                 <div className="col-6 ms-5 mt-5">
-                    <h1 className="display-6 text-warning text-center writing">Welcome</h1>
+                    <h1 className="display-6 text-warning text-center writing">Welcome {UserName}</h1>
                     <h1 className="display-lg-6 text-light text-center mt-4" style={{fontFamily: "sans-serif"}}>
                         TASTYC<br />WORLDWISE RESTAURANT
                     </h1>

@@ -1,8 +1,8 @@
 import React from 'react'
 import { NavLink, Outlet } from 'react-router-dom'
-import Nav from 'react-bootstrap/Nav'
-import Navbar from 'react-bootstrap/Navbar'
-import Container from 'react-bootstrap/Container'
+import { Nav } from 'react-bootstrap'
+import { Navbar } from 'react-bootstrap'
+import { Container }  from 'react-bootstrap'
 
 export const Header = () => {
   return (
@@ -13,12 +13,13 @@ export const Header = () => {
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="ms-auto">
-                    <li className="nav-item"><NavLink className="nav-link text-light" to={'/'}>Home</NavLink></li>
+                    <li className="nav-item"><NavLink className="nav-link text-light" to={'/home'}>Home</NavLink></li>
                     <li className="nav-item"><NavLink className="nav-link text-light" to={'/about'}>About</NavLink></li>
                     <li className="nav-item"><NavLink className="nav-link text-light" to={'/menu'}>Restaurant</NavLink></li>
                     <li className="nav-item"><NavLink className="nav-link text-light" to={'/booking'}>Booking</NavLink></li>
                     <li className="nav-item"><NavLink className="nav-link text-light" to={'/contact'}>Contact</NavLink></li>
                     <li className="nav-item"><NavLink className="nav-link text-light" to={'/cart'}>Cart</NavLink></li>
+                    <li className="nav-item"><NavLink className="nav-link text-light" to={'/'}>Log Out</NavLink></li>
                 </Nav>
             </Navbar.Collapse>
             </Container>

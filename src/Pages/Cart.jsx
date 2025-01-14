@@ -1,30 +1,28 @@
-import React, { useEffect, useMemo, useState } from 'react'
+import React, { useEffect, useState, useTransition } from 'react'
 import useFetch from '../Hooks/useFetch'
 import api from '../Api/apiUrl'
 
-const Cart = () => {
-    // const order = useFetch('/orderList');
-    const [order, setOrder] = useState([]);
+const Cart = ({order, userLogged}) => {
+    const [cart, setCart] = useState([])
+    // const [isPending, startTransition] = useTransition()
+
     useEffect(() => {
-        const fetchOrder = async() => {
-            try {
-                const response = await api.get("/orderList");
-                setOrder(response.data);
-            } catch (err) {
-                console.log(err.message);
-            }
-        }
-        fetchOrder()
-    }, [order])
+        const UserName = userLogged[0]?.userName
+        const UserOrder = order.filter(user => user.userName === UserName);
+        setCart(UserOrder)
+        console.log(UserOrder);
+    }, [])
+
+    // console.log(UserOrder);
+
     const cartDelete = async(id) => {
         await api.delete(`/orderList/${id}`)
     }
-    const priceList = order.map((item) => item.price*item.quantity);
+    const priceList = cart.map((item) => item.price*item.quantity);
     var totalCost = 0;
     for (let i = 0; i < priceList.length; i++) {
         totalCost = totalCost + priceList[i];
     }
-    console.log(totalCost);
   return (
     <main className='container py-3'>
         <h2 className="text-secondary border-bottom border-3 border-secondary">Cart</h2>
@@ -43,7 +41,7 @@ const Cart = () => {
                     </tr>
                 </thead>
                 <tbody>
-                    {order.map((item, index)=>(
+                    {cart.map((item, index)=>(
                         <tr key={index}>
                             <td>{index+1}</td>
                             <td>{item.name}</td>
