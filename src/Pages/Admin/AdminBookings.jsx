@@ -13,7 +13,7 @@ const AdminBookings = ({booking, userBookingDetails}) => {
                         <th>Mobile</th>
                         <th>Email</th>
                         <th>Count</th>
-                        <th>Count</th>
+                        <th>Class</th>
                         <th>Delete</th>
                     </tr>
                 </thead>
