@@ -1,12 +1,22 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Card from '../Components/Card';
 import {Loading} from '../Components/Index'
+import { useNavigate } from 'react-router-dom';
 
-const Menu = ({products, itemOrder, changeFav}) => {
+const Menu = ({products, itemOrder, changeFav, userLogged}) => {
+  const navigate = useNavigate();
+  const UserName = userLogged[0]?.userName
+  useEffect(() => {
+    if (!UserName){
+      navigate('/')
+      alert("LogIn First")
+    };
+  }, [UserName, navigate])
+  if (!UserName) return null;
   return (
-    <main className='pb-2 px-5'>
+    <main className='pb-2 px-2'>
       <h3 className="text-secondary border-bottom border-secondary border-3 pt-3">Menu</h3>
-      {products ? (
+      {products.length > 0 ? (
         products.map((product, index) => {
           const category = Object.keys(product)[0];
           const items = product[category];

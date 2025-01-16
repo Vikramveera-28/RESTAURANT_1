@@ -1,8 +1,18 @@
 import React, { useEffect, useState, useTransition } from 'react'
 import useFetch from '../Hooks/useFetch'
 import api from '../Api/apiUrl'
+import { useNavigate } from 'react-router-dom';
 
 const Cart = ({order, userLogged}) => {
+  const navigate = useNavigate();
+  const UserName = userLogged[0]?.userName
+  useEffect(() => {
+    if (!UserName){
+      navigate('/')
+      alert("LogIn First")
+    };
+  }, [UserName, navigate])
+  if (!UserName) return null;
     const [cart, setCart] = useState([])
     // const [isPending, startTransition] = useTransition()
 

@@ -1,7 +1,17 @@
 import React, { useEffect, useState } from 'react'
 import api from '../Api/apiUrl'
+import { useNavigate } from 'react-router-dom';
 
-const Booking = () => {
+const Booking = ({userLogged}) => {
+  const navigate = useNavigate();
+  const UserName = userLogged[0]?.userName
+  useEffect(() => {
+    if (!UserName){
+      navigate('/')
+      alert("LogIn First")
+    };
+  }, [UserName, navigate])
+  if (!UserName) return null;
     const [booking, setBooking] = useState([])
     const [name, setName] = useState("")
     const [mobile, setMobile] = useState()

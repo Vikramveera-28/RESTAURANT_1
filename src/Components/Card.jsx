@@ -23,9 +23,13 @@ const Card = ({item, itemOrder, category, changeFav}) => {
             {item.fav ? <span className='position-absolute top-0 end-0' onClick={() => changeFav(item.id, false, category)}>❤</span> : <span className='position-absolute top-0 end-0' onClick={() => changeFav(item.id, true, category)}>🤍</span>}
         </div>
         <div className="card-body">
-            <div className="d-flex justify-content-between">
+            <div className="row">
+                <div className="col-md-6">
                 <p>{item.ftype==="Veg" ? <span className='badge bg-success'>{item.ftype}</span> : <span className='badge bg-danger'>{item.ftype}</span>}</p>
+                </div>
+                <div className="col-md-6">
                 <p className='h5'>Price : <span className="badge bg-success">{item.price}</span></p>
+                </div>
             </div>
             <p className="card-text">Greate way to make your order to delicious food to cart</p>
         </div>

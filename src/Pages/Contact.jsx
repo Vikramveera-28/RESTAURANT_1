@@ -1,7 +1,17 @@
 import React, { useEffect, useState } from 'react';
 import api from '../Api/apiUrl';
+import { useNavigate } from 'react-router-dom';
 
-const Contact = () => {
+const Contact = ({userLogged}) => {
+  const navigate = useNavigate();
+  const UserName = userLogged[0]?.userName
+  useEffect(() => {
+    if (!UserName){
+      navigate('/')
+      alert("LogIn First")
+    };
+  }, [UserName, navigate])
+  if (!UserName) return null;
   const [contact, setContact] = useState([])
   const [name, setName] = useState('')
   const [mobile, setMobile] = useState()
@@ -87,7 +97,7 @@ const Contact = () => {
           ></textarea>
           <input type="submit" value="Sent" className='btn btn-primary w-100 mt-3' onClick={contactSubmit}/>
         </form>
-      </div>      
+      </div>
     </main>
   )
 }

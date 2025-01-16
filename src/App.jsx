@@ -202,6 +202,21 @@ function App() {
     }
   }
 
+  const logOut = async() => {
+    try {
+      navigate('/');
+      const Id = 1;
+      const Name = "";
+      const Pass = "";
+      const newUser = {id:Id, userName:Name, password:Pass};
+
+      const response = await api.put(`/userLogged/${Id}`, newUser)
+      setUserLogged(response.data)
+    } catch (err) {
+      console.log(err.message);
+    }
+  }
+
   // Change favate item
   const changeFav = async(id, fav, category) => {
     // const list = products.filter(list => Object.keys(list)[0] === category)[0][category]
@@ -222,7 +237,7 @@ function App() {
     <>
       <Suspense fallback={<Loading />}>
         <Routes>
-            <Route path='/' element={<Header />}>
+            <Route path='/' element={<Header logOut={logOut} userLogged={userLogged}/>}>
               <Route index element={
                   <Login
                     userName={userName}
@@ -244,19 +259,20 @@ function App() {
                   }
               />
               <Route path='/home' element={<Home userLogged={userLogged}/>} />
-              <Route path='/about' element={<About />} />
+              <Route path='/about' element={<About userLogged={userLogged}/>} />
               <Route path='/menu' element={
                   <Menu
+                    userLogged={userLogged}
                     products={products}
                     itemOrder={itemOrder}
                     changeFav={changeFav}/>
                   }
               />
-              <Route path='/contact' element={<Contact />} />
-              <Route path='/Booking' element={<Booking />} />
+              <Route path='/contact' element={<Contact userLogged={userLogged}/>} />
+              <Route path='/Booking' element={<Booking userLogged={userLogged}/>} />
               <Route path='/cart' element={<Cart order={order} userLogged={userLogged}/>} />
             </Route>
-              <Route path='/admin' element={<Aside />}>
+              <Route path='/admin' element={<Aside logOut={logOut}/>}>
                   <Route index element={<AdminHome user={user} contact={contact} booking={booking} products={products} order={order}/>}/>
                   <Route path='user' element={<AdminUser user={user} userDelete={userDelete}/>}/>
                   <Route path='contacts' element={<AdminContacts contact={contact} userContactDetails={userContactDetails}/>}/>
@@ -264,7 +280,7 @@ function App() {
               </Route>
         </Routes>
       </Suspense>
-    <Footer />
+    <Footer userLogged={userLogged}/>
     </>
   )
 }
