@@ -4,13 +4,13 @@ import { Link, useNavigate } from 'react-router-dom';
 const Home = ({userLogged}) => {
   const navigate = useNavigate();
   const UserName = userLogged[0]?.userName
-  useEffect(() => {
-    if (!UserName){
-      navigate('/')
-      alert("LogIn First")
-    };
-  }, [UserName, navigate])
-  if (!UserName) return null;
+  // useEffect(() => {
+  //   if (!UserName){
+  //     navigate('/')
+  //     alert("LogIn First")
+  //   };
+  // }, [UserName, navigate])
+  // if (!UserName) return null;
   return (
     <main className="container-fluid mainPage" id="homePage">
     <div className="position-relative p-5">

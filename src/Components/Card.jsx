@@ -33,7 +33,7 @@ const Card = ({item, itemOrder, category, changeFav}) => {
             </div>
             <p className="card-text">Greate way to make your order to delicious food to cart</p>
         </div>
-        <div className="card-footer position-absolute bottom-0 w-100 d-flex gap-2 justify-content-between p-2">
+        <div className="card-footer w-100 d-flex gap-2 justify-content-between p-2">
             <div className="d-flex">
                 <button className="btn btn-warning" onClick={decrement}>-</button>
                 <input type="number" className='border border-0 text-center count-input form-control' readOnly value={count} onChange={(e) => e.target.value}/>

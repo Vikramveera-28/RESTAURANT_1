@@ -9,9 +9,9 @@ export const Header = ({logOut, userLogged}) => {
   const navigate = useNavigate();
   return (
     <header className='mb-5'>
-        <Navbar expand="md" className="bg-dark">
+        <Navbar expand="md" className="bg-dark fixed-top">
             <Container>
-            <Navbar.Brand href="#home" className='text-light'>React-Bootstrap</Navbar.Brand>
+            <Navbar.Brand href="#" className='text-light'>FastFood</Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
               {UserName && (

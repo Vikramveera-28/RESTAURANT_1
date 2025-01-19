@@ -5,13 +5,13 @@ import { useNavigate } from 'react-router-dom';
 const Contact = ({userLogged}) => {
   const navigate = useNavigate();
   const UserName = userLogged[0]?.userName
-  useEffect(() => {
-    if (!UserName){
-      navigate('/')
-      alert("LogIn First")
-    };
-  }, [UserName, navigate])
-  if (!UserName) return null;
+  // useEffect(() => {
+  //   if (!UserName){
+  //     navigate('/')
+  //     alert("LogIn First")
+  //   };
+  // }, [UserName, navigate])
+  // if (!UserName) return null;
   const [contact, setContact] = useState([])
   const [name, setName] = useState('')
   const [mobile, setMobile] = useState()
@@ -55,7 +55,7 @@ const Contact = ({userLogged}) => {
     }
   }
   return (
-    <main className='container'>
+    <main className='container mt-5'>
       <h3 className="text-secondary border-bottom border-secondary border-3 pt-3">Contact</h3>
       <div className="row mt-5">
         <form action="" onSubmit={(e) => e.preventDefault()}>

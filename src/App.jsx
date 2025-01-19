@@ -16,6 +16,8 @@ const AdminUser = React.lazy(() => import('./Pages/Admin/AdminUser'))
 const AdminContacts = React.lazy(() => import('./Pages/Admin/AdminContacts'))
 const AdminBookings = React.lazy(() => import('./Pages/Admin/AdminBookings'))
 import api from './Api/apiUrl'
+import { useNotification } from './Hooks/useNotification'
+import PageNotFound from './Pages/PageNotFound'
 
 function App() {
   // User
@@ -103,13 +105,14 @@ function App() {
     fetchBooking()
   }, [booking])
 
+
   // User LogIn Fuction
   const userLoggIn = async() => {
     if (userName === "admin") {
       if (userPassword === "admin01") {
         navigate('/admin')
       } else {
-        alert("Admin Password Invalid")
+        // notification("Admin Password Invalid")
       }
     } else {
       const User = user.find(user => user.userName === userName)
@@ -128,10 +131,10 @@ function App() {
             console.log(err.message);
           }
         } else {
-          alert("Password is Invalid...")
+          useNotification("Password is Invalid...")
         }
       } else {
-        alert("UserName is Invalid...")
+        useNotification('UserName is Invalid...')
       }
     }
   }
@@ -151,7 +154,7 @@ function App() {
         console.log(err.message);
       }
     } else {
-      alert("Password are mismatch")
+      useNotification('Password are mismatch')
     }
   }
 
@@ -171,7 +174,7 @@ function App() {
       const response = await api.post('/orderList', newItem)
       setOrder(response.data);
     } else {
-      alert("Enter your item quantity");
+      useNotification('Enter your item quantity')
     }
   }
 
@@ -237,7 +240,12 @@ function App() {
     <>
       <Suspense fallback={<Loading />}>
         <Routes>
-            <Route path='/' element={<Header logOut={logOut} userLogged={userLogged}/>}>
+            <Route path='/' element={
+              <>
+                <Header logOut={logOut} userLogged={userLogged}/>
+                <Footer userLogged={userLogged}/>
+              </>
+              }>
               <Route index element={
                   <Login
                     userName={userName}
@@ -278,9 +286,9 @@ function App() {
                   <Route path='contacts' element={<AdminContacts contact={contact} userContactDetails={userContactDetails}/>}/>
                   <Route path='bookings' element={<AdminBookings booking={booking} userBookingDetails={userBookingDetails}/>}/>
               </Route>
+              <Route path='*' element={<PageNotFound />} />
         </Routes>
       </Suspense>
-    <Footer userLogged={userLogged}/>
     </>
   )
 }

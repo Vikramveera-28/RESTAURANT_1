@@ -6,12 +6,12 @@ const About = ({userLogged}) => {
   const UserName = userLogged[0]?.userName
   useEffect(() => {
     if (!UserName){
-      navigate('/')
+      // navigate('/')
       alert("LogIn First")
     };
   }, [UserName, navigate])
   return (
-    <main className="container" id="aboutPage">
+    <main className="container mt-5" id="aboutPage">
       <h3 className="text-secondary border-bottom border-secondary border-3 pt-3">Contact</h3>
         <div className="row">
             <div className="col-12 col-md-6 box-left">

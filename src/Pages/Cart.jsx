@@ -1,20 +1,19 @@
-import React, { useEffect, useState, useTransition } from 'react'
+import React, { useEffect, useState } from 'react'
 import useFetch from '../Hooks/useFetch'
 import api from '../Api/apiUrl'
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Cart = ({order, userLogged}) => {
   const navigate = useNavigate();
   const UserName = userLogged[0]?.userName
-  useEffect(() => {
-    if (!UserName){
-      navigate('/')
-      alert("LogIn First")
-    };
-  }, [UserName, navigate])
-  if (!UserName) return null;
+//   useEffect(() => {
+//     if (!UserName){
+//       navigate('/')
+//       alert("LogIn First")
+//     };
+//   }, [UserName, navigate])
+//   if (!UserName) return null;
     const [cart, setCart] = useState([])
-    // const [isPending, startTransition] = useTransition()
 
     useEffect(() => {
         const UserName = userLogged[0]?.userName
@@ -23,10 +22,9 @@ const Cart = ({order, userLogged}) => {
         console.log(UserOrder);
     }, [])
 
-    // console.log(UserOrder);
-
     const cartDelete = async(id) => {
         await api.delete(`/orderList/${id}`)
+        useNotification("Cart item is delete")
     }
     const priceList = cart.map((item) => item.price*item.quantity);
     var totalCost = 0;
@@ -34,8 +32,9 @@ const Cart = ({order, userLogged}) => {
         totalCost = totalCost + priceList[i];
     }
   return (
-    <main className='container py-3'>
+    <main className='container mt-5'>
         <h2 className="text-secondary border-bottom border-3 border-secondary">Cart</h2>
+        {cart.length>0 ? (
         <div className="table-responsive">
             <table className="table table-hover table-bordered">
                 <thead className='text-center table-dark'>
@@ -70,6 +69,12 @@ const Cart = ({order, userLogged}) => {
                 </tbody>
             </table>
         </div>
+        ) : (
+            <div className="d-flex flex-column justify-content-center align-items-center">
+                <h1>Your Cart is empty</h1>
+                <h6><Link to={'/menu'}>Order your Food</Link></h6>
+            </div>
+        )}
     </main>
   )
 }

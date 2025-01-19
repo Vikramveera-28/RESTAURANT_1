@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const Register = ({RegisterName, setRegisterName, RegisterPassword1, setRegisterPassword1, RegisterPassword2, setRegisterPassword2, handleSubmit}) => {
   return (
-    <main className='container'>
+    <main className='container mt-5'>
         <h3 className="text-secondary border-bottom border-secondary border-3 my-3">Register Page</h3>
         <form action="" onSubmit={(e) => e.preventDefault()}>
             <label htmlFor="username" className="form-label">UserName :</label>
